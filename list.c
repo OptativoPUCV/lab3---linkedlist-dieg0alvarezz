@@ -35,7 +35,7 @@ List * createList() {
     return new;
 }
    
-}
+
 
 void * firstList(List * list) {
     return NULL;
