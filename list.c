@@ -25,9 +25,9 @@ Node * createNode(void * data) {
     new->data = data;
     new->prev = NULL;
     new->next = NULL;
+    free(new);
     return new;
 }
-
 List * createList() {
     List * new = (List *)malloc(sizeof(List));
     //assert(new != NULL);
