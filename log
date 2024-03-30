@@ -125,3 +125,30 @@ list.c:46:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 ec1c296
+Sat 30 Mar 2024 09:24:54 PM UTC: 
+ list.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘create_list’:
+list.c:35:4: error: ‘List’ {aka ‘struct List’} has no member named ‘size’
+   35 |   L->size = NULL;
+      |    ^~
+list.c: In function ‘first’:
+list.c:43:7: error: ‘List’ {aka ‘struct List’} has no member named ‘size’
+   43 |   if(L->size == 0) {
+      |       ^~
+list.c:47:11: error: ‘List’ {aka ‘struct List’} has no member named ‘data’
+   47 |   return L->data[L->current];
+      |           ^~
+list.c: In function ‘nextList’:
+list.c:52:6: error: ‘L’ undeclared (first use in this function)
+   52 |   if(L->current < L->size - 1) {
+      |      ^
+list.c:52:6: note: each undeclared identifier is reported only once for each function it appears in
+list.c: In function ‘first’:
+list.c:48:1: error: control reaches end of non-void function [-Werror=return-type]
+   48 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+c425500
