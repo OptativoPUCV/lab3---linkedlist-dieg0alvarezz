@@ -259,3 +259,14 @@ Sat 30 Mar 2024 10:23:45 PM UTC:
  tests:  9|3
 total_score: 35/70
 a31df4f
+Sat 30 Mar 2024 10:40:45 PM UTC: 
+ list.c | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:111:5: error: ‘nuevo’ undeclared (first use in this function)
+  111 |     nuevo->next = list->head;
+      |     ^~~~~
+list.c:111:5: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+641e5f7
