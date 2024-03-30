@@ -179,3 +179,9 @@ list.c:48:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 dca90ef
+Sat 30 Mar 2024 10:02:10 PM UTC: 
+ list.c | 26 +++-----------------------
+ 1 file changed, 3 insertions(+), 23 deletions(-)
+ tests:  0|6
+total_score: 0/70
+d768fb8
