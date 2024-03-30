@@ -32,7 +32,7 @@ List* create_list() {
   
   List* L = (List*)malloc(sizeof(List));
   L->current = NULL ;
-  L->size = NULL;
+  L->size = 0;
   return L;
 }
 
