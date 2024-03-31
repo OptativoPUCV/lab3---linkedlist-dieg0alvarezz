@@ -125,7 +125,7 @@ void pushBack(List * list, void * data) {
 void pushCurrent(List * list, void * data) {
     if (list == NULL)
     {
-      return NULL;
+      return ;
     }
     if (list->current == NULL)  
     {
