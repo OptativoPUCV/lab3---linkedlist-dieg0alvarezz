@@ -123,10 +123,21 @@ void pushBack(List * list, void * data) {
 }
 
 void pushCurrent(List * list, void * data) {
+    if (list == NULL)
+    {
+      return NULL;
+    }
+    if (list->current == NULL)  
+    {
+      pushFront(list,data);
+      return;
+    }
 }
 
 void * popFront(List * list) {
+
     list->current = list->head;
+  
     return popCurrent(list);
 }
 
@@ -136,7 +147,16 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
+  if (list->current == NULL)
+  {
     return NULL;
+    
+  }
+  else
+  {
+    if (list->current->prev == NULL);
+    
+  }
 }
 
 void cleanList(List * list) {

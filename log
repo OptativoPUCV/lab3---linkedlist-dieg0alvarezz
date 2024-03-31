@@ -287,3 +287,21 @@ Sat 30 Mar 2024 10:41:43 PM UTC:
  tests:  10|2
 total_score: 45/70
 55817c9
+Sun 31 Mar 2024 12:33:21 AM UTC: 
+ list.c | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:128:14: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+  128 |       return NULL;
+      |              ^~~~
+list.c:125:6: note: declared here
+  125 | void pushCurrent(List * list, void * data) {
+      |      ^~~~~~~~~~~
+list.c: In function ‘popCurrent’:
+list.c:160:1: error: control reaches end of non-void function [-Werror=return-type]
+  160 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+4c1b9cf
