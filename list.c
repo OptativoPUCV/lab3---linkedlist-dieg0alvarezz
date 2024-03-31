@@ -156,28 +156,31 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) {
     if (list == NULL || list->current == NULL) {
-        return NULL; 
+        return NULL; // Si la lista o el nodo actual son nulos, no se puede realizar ninguna operación.
+    }
 
-    Node * current = list->current;
-    void * data = current->data;
+    Node * current = list->current; // Guarda el nodo actual en una variable temporal.
+    void * data = current->data; // Guarda los datos del nodo actual en una variable temporal.
 
+    // Actualiza los punteros next y prev de los nodos vecinos para que apunten entre sí, excluyendo al nodo actual.
     if (current->prev != NULL) {
         current->prev->next = current->next;
     } else {
         list->head = current->next;
     }
-
     if (current->next != NULL) {
         current->next->prev = current->prev;
     } else {
         list->tail = current->prev;
     }
 
+    // Actualiza el puntero current de la lista al nodo anterior al nodo actual.
     list->current = current->prev;
 
+    // Libera la memoria asignada al nodo actual.
     free(current);
 
-    return data;
+    return data; // Devuelve los datos del nodo eliminado.
 }
 
 
