@@ -397,3 +397,21 @@ Sun 31 Mar 2024 12:49:53 AM UTC:
  tests:  12|0
 total_score: 70/70
 14f8649
+Sun 31 Mar 2024 12:50:15 AM UTC: 
+ list.c | 14 ++++++--------
+ 1 file changed, 6 insertions(+), 8 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:162:37: error: expected expression before ‘/’ token
+  162 |     Node * current = list->current; /
+      |                                     ^
+list.c:181:12: error: ‘data’ undeclared (first use in this function)
+  181 |     return data;
+      |            ^~~~
+list.c:181:12: note: each undeclared identifier is reported only once for each function it appears in
+list.c:182:1: error: control reaches end of non-void function [-Werror=return-type]
+  182 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+e70384f
