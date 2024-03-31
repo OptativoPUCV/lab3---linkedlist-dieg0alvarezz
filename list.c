@@ -156,10 +156,10 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) {
     if (list == NULL || list->current == NULL) {
-        return NULL; // Si la lista o el nodo actual son nulos, no se puede realizar ninguna operación.
+        return NULL; 
     }
 
-    Node * current = list->current; /
+    Node * current = list->current; 
     void * data = current->data; 
     if (current->prev != NULL) {
         current->prev->next = current->next;
